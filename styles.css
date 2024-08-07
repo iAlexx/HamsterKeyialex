@@ -5,7 +5,7 @@ html, body {
     display: grid;
     place-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(270deg, #000, #FF0000, #fff);
+    background: linear-gradient(270deg, #000, #FF0000, #000);
     background-size: 600% 600%;
     animation: backgroundAnimation 10s ease infinite;
 }
@@ -76,10 +76,15 @@ select:hover, .key-item input:hover {
     font-size: 16px;
     margin: 5px;
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    animation: buttonColorAnimation 3s ease-in-out infinite;
+}
+
+@keyframes buttonColorAnimation {
+    0%, 100% { background-color: #FF0000; }
+    50% { background-color: #CC0000; }
 }
 
 .button:hover, .key-item button:hover {
-    background-color: #CC0000; /* لون أحمر داكن عند التمرير */
     transform: scale(1.1); /* تكبير الزر عند التمرير */
 }
 
