@@ -327,6 +327,23 @@ async function generateKey(clientToken) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // باقي الشيفرة الخاصة بك
+
+    // شيفرة التفاعلية
+    document.getElementById('startBtn').addEventListener('click', function() {
+        gsap.to(this, { scale: 1.2, duration: 0.2, yoyo: true, repeat: 1 });
+    });
+
+    document.getElementById('copyAllBtn').addEventListener('click', function() {
+        gsap.to(this, { rotation: 360, duration: 1 });
+    });
+
+    document.getElementById('generateMoreBtn').addEventListener('click', function() {
+        gsap.to(this, { x: 10, duration: 0.1, yoyo: true, repeat: 5 });
+    });
+});
+
 
 function delayRandom() {
     return Math.random() / 3 + 1;
