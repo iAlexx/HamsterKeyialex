@@ -48,7 +48,7 @@ async function loadTranslations(language) {
         return await response.json();
     } catch (error) {
         console.error('Error loading translations:', error);
-        alert('Failed to load translations. Check the console for details.');
+        console.log('Failed to load translations. Check the console for details.');
         throw error;
     }
 }
@@ -145,7 +145,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
         try {
             clientToken = await login(clientId);
         } catch (error) {
-            alert(`Failed to log in: ${error.message}`);
+            console.log(`Failed to log in: ${error.message}`);
             startBtn.disabled = false;
             return null;
         }
@@ -164,7 +164,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
             updateProgress(30 / keyCount);
             return key;
         } catch (error) {
-            alert(`Failed to generate key: ${error.message}`);
+            console.log(`Failed to generate key: ${error.message}`);
             return null;
         }
     };
