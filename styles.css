@@ -5,7 +5,7 @@ html, body {
     display: grid;
     place-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(270deg, #000, #FF0000, #000);
+    background: linear-gradient(270deg, #000, #FFD700, #000, #FFD700);
     background-size: 600% 600%;
     animation: backgroundAnimation 10s ease infinite;
 }
@@ -18,7 +18,7 @@ html, body {
 
 .container {
     position: relative;
-    background: linear-gradient(45deg, #fff, #000);
+    background: linear-gradient(45deg, #333, #FFD700);
     background-size: 200% 200%;
     animation: containerAnimation 5s ease infinite;
     padding: 20px;
@@ -37,13 +37,13 @@ html, body {
 }
 
 h1, label, .progress-text, .key-container h2 {
-    color: #FF0000; /* اللون الأحمر */
+    color: #FFD700; /* اللون الذهبي */
     animation: textColorAnimation 2s ease-in-out infinite;
 }
 
 @keyframes textColorAnimation {
-    0%, 100% { color: #FF0000; }
-    50% { color: #CC0000; }
+    0%, 100% { color: #FFD700; }
+    50% { color: #FFF; }
 }
 
 select, .key-item input {
@@ -52,23 +52,23 @@ select, .key-item input {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
-    color: #000;
+    background-color: #333; /* خلفية داكنة */
+    color: #FFD700; /* نص ذهبي */
     text-align-last: center;
     font-size: large;
     transition: background-color 0.3s, color 0.3s;
 }
 
 select:hover, .key-item input:hover {
-    background-color: #f0f0f0;
-    color: #FF0000;
+    background-color: #555;
+    color: #FFF;
 }
 
 .button, .key-item button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FF0000; /* اللون الأحمر */
-    color: white;
+    background-color: #FFD700; /* اللون الذهبي */
+    color: #000; /* نص أسود */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -80,8 +80,8 @@ select:hover, .key-item input:hover {
 }
 
 @keyframes buttonColorAnimation {
-    0%, 100% { background-color: #FF0000; }
-    50% { background-color: #CC0000; }
+    0%, 100% { background-color: #FFD700; }
+    50% { background-color: #FFC107; }
 }
 
 .button:hover, .key-item button:hover {
@@ -97,7 +97,7 @@ select:hover, .key-item input:hover {
 .progress-bar {
     width: 0%;
     height: 20px;
-    background-color: #FF0000; /* اللون الأحمر */
+    background-color: #FFD700; /* اللون الذهبي */
     border-radius: 4px;
     transition: width 0.3s;
 }
@@ -119,7 +119,7 @@ select:hover, .key-item input:hover {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    background-color: #fff; /* خلفية بيضاء */
+    background-color: #333; /* خلفية داكنة */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -128,8 +128,8 @@ select:hover, .key-item input:hover {
 }
 
 .key-item:hover {
-    background-color: #f0f0f0;
-    color: #FF0000;
+    background-color: #555;
+    color: #FFD700; /* نص ذهبي عند التمرير */
 }
 
 .hidden {
@@ -138,6 +138,6 @@ select:hover, .key-item input:hover {
 
 .copy-status {
     margin-top: 10px;
-    color: #FF0000; /* اللون الأحمر */
+    color: #FFD700; /* اللون الذهبي */
     font-weight: bold;
 }
