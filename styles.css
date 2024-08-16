@@ -1,143 +1,209 @@
-html, body {
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(270deg, #000, #FFD700, #000, #FFD700);
-    background-size: 600% 600%;
-    animation: backgroundAnimation 10s ease infinite;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Container */
 .container {
-    position: relative;
-    background: linear-gradient(45deg, #333, #FFD700);
-    background-size: 200% 200%;
-    animation: containerAnimation 5s ease infinite;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, #ffffff 0%, #e6ebf1 100%);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    padding: 35px;
+    max-width: 450px;
     width: 100%;
-    max-width: 500px;
     text-align: center;
-    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
 }
 
-@keyframes containerAnimation {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+.container:hover {
+    transform: translateY(-10px);
 }
 
-h1, label, .progress-text, .key-container h2 {
-    color: #FFD700; /* اللون الذهبي */
-    animation: textColorAnimation 2s ease-in-out infinite;
+/* Headings */
+h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #34495e;
+    letter-spacing: 1.5px;
+    background: linear-gradient(145deg, #3498db, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-@keyframes textColorAnimation {
-    0%, 100% { color: #FFD700; }
-    50% { color: #FFF; }
-}
-
-select, .key-item input {
-    padding: 10px;
-    width: 100%;
+/* Form Group */
+.form-group {
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #333; /* خلفية داكنة */
-    color: #FFD700; /* نص ذهبي */
-    text-align-last: center;
-    font-size: large;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-select:hover, .key-item input:hover {
-    background-color: #555;
-    color: #FFF;
-}
-
-.button, .key-item button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FFD700; /* اللون الذهبي */
-    color: #000; /* نص أسود */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 5px;
-    transition: background-color 0.3s, transform 0.3s, color 0.3s;
-    animation: buttonColorAnimation 3s ease-in-out infinite;
-}
-
-@keyframes buttonColorAnimation {
-    0%, 100% { background-color: #FFD700; }
-    50% { background-color: #FFC107; }
-}
-
-.button:hover, .key-item button:hover {
-    transform: scale(1.1); /* تكبير الزر عند التمرير */
-}
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 20px;
-    background-color: #FFD700; /* اللون الذهبي */
-    border-radius: 4px;
-    transition: width 0.3s;
-}
-
-.key-container {
-    margin-top: 20px;
-    max-height: 400px;
-    overflow-y: scroll;
-}
-
-.keys-list {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.key-item {
-    display: flex;
-    align-items: center;
+/* Labels */
+label {
+    display: block;
     margin-bottom: 10px;
-    background-color: #333; /* خلفية داكنة */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    word-wrap: break-word;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    font-size: 14px;
+    color: #7f8c8d;
+    text-align: left;
 }
 
-.key-item:hover {
-    background-color: #555;
-    color: #FFD700; /* نص ذهبي عند التمرير */
+/* Select Dropdown */
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dcdfe6;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #ecf0f1;
+    color: #2c3e50;
+    outline: none;
 }
 
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(145deg, #3498db 0%, #2980b9 100%);
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2980b9 0%, #3498db 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden Elements */
 .hidden {
     display: none;
 }
 
-.copy-status {
-    margin-top: 10px;
-    color: #FFD700; /* اللون الذهبي */
+/* Progress Bar */
+.progress-bar {
+    background-color: #dcdfe6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 25px;
+    height: 12px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: linear-gradient(145deg, #3498db 0%, #2980b9 100%);
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+#progressText {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #7f8c8d;
+}
+
+/* Key Items */
+.key-item {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.key-item input {
+    flex: 1;
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    margin-right: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #ecf0f1;
+    color: #2c3e50;
+    outline: none;
+}
+
+.key-item input::placeholder {
+    color: #bdc3c7;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.key-item input:focus::placeholder {
+    opacity: 0;
+}
+
+.key-item input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Copy Button */
+.copyKeyBtn {
+    background: linear-gradient(145deg, #2ecc71 0%, #27ae60 100%);
+    border: none;
+    padding: 14px 30px;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.copyKeyBtn:hover {
+    background: linear-gradient(145deg, #27ae60 0%, #2ecc71 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #95a5a6;
+    text-align: center;
+}
+
+/* Copy Status */
+#copyStatus {
+    margin-top: 15px;
+    color: #27ae60;
     font-weight: bold;
+}
+
+/* Telegram Channel Button */
+#telegramChannelBtn {
+    background: linear-gradient(145deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#telegramChannelBtn:hover {
+    background: linear-gradient(145deg, #c0392b 0%, #e74c3c 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
