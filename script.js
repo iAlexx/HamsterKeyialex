@@ -22,9 +22,9 @@ const gamePromoConfigs = {
         promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
     },
     TwerkRace: {
-        appToken: "61308365-9d16-4040-8bb0-2f4a4c69074c",
-        promoId: "61308365-9d16-4040-8bb0-2f4a4c69074c"
-    }, 
+	appToken: "61308365-9d16-4040-8bb0-2f4a4c69074c",
+	promoId: "61308365-9d16-4040-8bb0-2f4a4c69074c"
+   }, 
 };
 
 let currentAppConfig = gamePromoConfigs.MyCloneArmy;
@@ -56,7 +56,7 @@ async function loadTranslations(language) {
         return await response.json();
     } catch (error) {
         console.error('Error loading translations:', error);
-        console.log('Failed to load translations. Check the console for details.');
+        alert('Failed to load translations. Check the console for details.');
         throw error;
     }
 }
@@ -153,7 +153,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
         try {
             clientToken = await login(clientId);
         } catch (error) {
-            console.log(`Failed to log in: ${error.message}`);
+            alert(`Failed to log in: ${error.message}`);
             startBtn.disabled = false;
             return null;
         }
@@ -172,7 +172,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
             updateProgress(30 / keyCount);
             return key;
         } catch (error) {
-            console.log(`Failed to generate key: ${error.message}`);
+            alert(`Failed to generate key: ${error.message}`);
             return null;
         }
     };
@@ -243,7 +243,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('creatorChannelBtn').addEventListener('click', () => {
-    window.location.href = 'https://t.me/iAlexMG';
+    window.location.href = 'https://t.me/pdosi_project';
 });
 
 function generateClientId() {
@@ -260,7 +260,12 @@ async function login(clientId) {
     });
     const data = await response.json();
     if (!response.ok) {
-        throw new Error(data.message || 'Failed to log in');
+        if (data.error_code == "TooManyIpRequest") {
+            throw new Error('You have reached the rate limit. Please wait a few minutes and try again.');
+        } else {
+            throw new Error(data.error_message || 'Failed to log in');
+        }
+        
     }
     return data.clientToken;
 }
@@ -311,7 +316,7 @@ async function emulateProgress(clientToken) {
     });
     const data = await response.json();
     // if (!response.ok) {
-    //     throw new Error(data.message || 'Failed to register event');
+    //     throw new Error(data.error_message || 'Failed to register event');
     // }
     return data.hasCode;
 }
@@ -327,7 +332,7 @@ async function generateKey(clientToken) {
     });
     const data = await response.json();
     if (!response.ok) {
-        throw new Error(data.message || 'Failed to generate key');
+        throw new Error(data.error_message || 'Failed to generate key');
     }
     return data.promoCode;
 }
@@ -335,23 +340,6 @@ async function generateKey(clientToken) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-document.addEventListener('DOMContentLoaded', function() {
-    // باقي الشيفرة الخاصة بك
-
-    // شيفرة التفاعلية
-    document.getElementById('startBtn').addEventListener('click', function() {
-        gsap.to(this, { scale: 1.2, duration: 0.2, yoyo: true, repeat: 1 });
-    });
-
-    document.getElementById('copyAllBtn').addEventListener('click', function() {
-        gsap.to(this, { rotation: 360, duration: 1 });
-    });
-
-    document.getElementById('generateMoreBtn').addEventListener('click', function() {
-        gsap.to(this, { x: 10, duration: 0.1, yoyo: true, repeat: 5 });
-    });
-});
-
 
 function delayRandom() {
     return Math.random() / 3 + 1;
