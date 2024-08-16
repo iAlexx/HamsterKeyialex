@@ -272,7 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open('https://t.me/iAlexMG', '_blank');
     });
 
-    telegramChannelBtn.addEventListener('click', () => {
-        window.open('https://t.me/iHamster_Key_Bot', '_blank');
+    document.getElementById('creatorBtn').addEventListener('click', () => {
+        window.open('https://t.me/xDevAlex', '_blank');
+
     });
 });
