@@ -1,7 +1,7 @@
 const EVENTS_DELAY = 20000;
 const defaultLanguage = document.documentElement.getAttribute('lang')
 const gamePromoConfigs = {
-    MyCloneArmy1: {
+    MyCloneArmy: {
         appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
         promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767'
     },
@@ -27,7 +27,7 @@ const gamePromoConfigs = {
     }, 
 };
 
-let currentAppConfig = gamePromoConfigs.MyCloneArmy1;
+let currentAppConfig = gamePromoConfigs.MyCloneArmy;
 var currentLanguage;
 var keygenActive = false;
 
