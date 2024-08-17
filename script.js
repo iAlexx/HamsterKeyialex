@@ -2,8 +2,8 @@ const EVENTS_DELAY = 20000;
 const defaultLanguage = document.documentElement.getAttribute('lang')
 const gamePromoConfigs = {
     MyCloneArmy: {
-        appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
-        promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767'
+        appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
+        promoId: '43e35910-c168-4634-ad4f-52fd764a843f'
     },
     ChainCube2048: {
         appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
