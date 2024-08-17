@@ -7,20 +7,12 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #2c003e;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0;
-    position: relative;
-    /* إضافة الخلفية المتحركة */
+    /* تعيين الخلفية المتحركة */
     background-image: url('https://media.tenor.com/rIXnKipo0E1.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #f0e6d6; /* لون النص الأساسي */
 }
 
 .main-container {
@@ -34,15 +26,15 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     /* إضافة خلفية نصف شفافة للمحتوى */
-    background-color: rgba(44, 0, 62, 0.85);
+    background-color: rgba(0, 0, 0, 0.75); /* خلفية شبه شفافة داكنة */
     border-radius: 8px;
 }
 
 .container {
-    background-color: #1e0027;
+    background-color: #1e1e1e; /* لون داكن مشابه للأسود الفاتح */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(136, 3, 219, 0.713);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* تأثير ظل ذهبي */
     text-align: center;
     box-sizing: border-box;
     width: 100%;
@@ -51,24 +43,24 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #e0b3ff;
+    color: #ffd700; /* لون ذهبي */
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #d1a3ff;
+    color: #ffd700; /* لون ذهبي */
 }
 
 select {
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffd700; /* لون ذهبي */
     border-radius: 4px;
-    background-color: #4b006e;
-    color: #e0b3ff;
+    background-color: #333333; /* لون داكن */
+    color: #ffd700; /* لون ذهبي */
     text-align-last: center;
     font-size: large;
 }
@@ -81,8 +73,8 @@ select option {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #6a0080;
-    color: white;
+    background-color: #ffd700; /* لون ذهبي */
+    color: #000000; /* لون نص أسود */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -93,7 +85,7 @@ select option {
 }
 
 .button:hover {
-    background-color: #4a004d;
+    background-color: #ffcc00; /* ظل ذهبي أفتح */
 }
 
 .progress-container {
@@ -105,7 +97,7 @@ select option {
 .progress-bar {
     width: 0%;
     height: 20px;
-    background-color: #8a00b0;
+    background-color: #ffd700; /* لون ذهبي */
     border-radius: 4px;
     transition: width 0.3s;
 }
@@ -113,7 +105,7 @@ select option {
 .progress-text {
     margin-left: 10px;
     font-weight: bold;
-    color: #d1a3ff;
+    color: #ffd700; /* لون ذهبي */
 }
 
 .key-container {
@@ -124,7 +116,7 @@ select option {
 }
 
 .key-container h2 {
-    color: #d1a3ff;
+    color: #ffd700; /* لون ذهبي */
 }
 
 .keys-list {
@@ -138,9 +130,9 @@ select option {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    background-color: #2c003e;
+    background-color: #333333; /* لون داكن */
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffd700; /* لون ذهبي */
     border-radius: 4px;
     word-wrap: break-word;
 }
@@ -149,7 +141,7 @@ select option {
     flex-grow: 1;
     border: none;
     background: transparent;
-    color: #e0b3ff;
+    color: #ffd700; /* لون ذهبي */
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -160,8 +152,8 @@ select option {
     text-align: center;
     width: 40px;
     padding: 10px 10px;
-    background-color: #6a0080;
-    color: white;
+    background-color: #ffd700; /* لون ذهبي */
+    color: #000000; /* لون نص أسود */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -171,18 +163,18 @@ select option {
 
 .key-item button {
     margin-left: 10px;
-    background-color: #6a0080;
+    background-color: #ffd700; /* لون ذهبي */
     border: none;
     padding: 10px 10px;
     border-radius: 4px;
     cursor: pointer;
-    color: white;
+    color: #000000; /* لون نص أسود */
     font-size: 14px;
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
 .key-item button:hover {
-    background-color: #4a004d;
+    background-color: #ffcc00; /* ظل ذهبي أفتح */
 }
 
 .hidden {
@@ -191,7 +183,7 @@ select option {
 
 .copy-status {
     margin-top: 10px;
-    color: #d1a3ff;
+    color: #ffd700; /* لون ذهبي */
     font-weight: bold;
 }
 
@@ -203,9 +195,9 @@ select option {
 }
 
 #languageSelect {
-    background-color: #4b006e;
-    color: #e0b3ff;
-    border: 1px solid #ddd;
+    background-color: #333333; /* لون داكن */
+    color: #ffd700; /* لون ذهبي */
+    border: 1px solid #ffd700; /* لون ذهبي */
     border-radius: 4px;
     padding: 5px;
     font-size: large;
@@ -213,8 +205,8 @@ select option {
 
 .footer-button {
     margin-top: 20px;
-    background-color: #6a0080;
-    color: white;
+    background-color: #ffd700; /* لون ذهبي */
+    color: #000000; /* لون نص أسود */
     border: none;
     border-radius: 4px;
     cursor: pointer;
