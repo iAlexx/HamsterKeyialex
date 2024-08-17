@@ -1,10 +1,6 @@
 const EVENTS_DELAY = 20000;
 const defaultLanguage = document.documentElement.getAttribute('lang')
 const gamePromoConfigs = {
-    MyCloneArmy: {
-        appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
-        promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767'
-    },
     ChainCube2048: {
         appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
         promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3'
@@ -17,6 +13,10 @@ const gamePromoConfigs = {
         appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
         promoId: '43e35910-c168-4634-ad4f-52fd764a843f'
     },
+     MyCloneArmy: {
+        appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
+        promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767'
+    },
     MergeAway: {
         appToken: '8d1cc2ad-e097-4b86-90ef-7a27e19fb833',
         promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
@@ -24,7 +24,7 @@ const gamePromoConfigs = {
     TwerkRace: {
         appToken: '61308365-9d16-4040-8bb0-2f4a4c69074c',
         promoId: '61308365-9d16-4040-8bb0-2f4a4c69074c'
-    }, 
+    },
 };
 
 let currentAppConfig = gamePromoConfigs.MyCloneArmy;
@@ -243,11 +243,6 @@ document.getElementById('startBtn').addEventListener('click', async () => {
 
 document.getElementById('creatorChannelBtn').addEventListener('click', () => {
     window.open('https://t.me/iAlexMG', '_blank');
-});
-
-document.getElementById('creatorBtn').addEventListener('click', () => {
-    window.open('https://t.me/xDevAlex', '_blank');
-
 });
 
 function generateClientId() {
