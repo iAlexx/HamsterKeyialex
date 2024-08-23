@@ -42,6 +42,12 @@ const gamePromoConfigs = {
         eventsDelay: 20000,
         attemptsNumber: 20
     },
+    MudRacing: {
+        appToken: '8814a785-97fb-4177-9193-ca4180ff9da8',
+        promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
+        eventsDelay: 20000,
+        attemptsNumber: 20
+    }
 };
 
 let currentAppConfig = gamePromoConfigs.MyCloneArmy;
