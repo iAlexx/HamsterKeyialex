@@ -57,19 +57,24 @@ const gamePromoConfigs = {
     StoneAge: {
         appToken: '04ebd6de-69b7-43d1-9c4b-04a6ca3305af',
         promoId: '04ebd6de-69b7-43d1-9c4b-04a6ca3305af',
-        attemptsNumber: 20,
-        eventsDelay: 20000
+        eventsDelay: 20000,
+        attemptsNumber: 20
     },
-    BounceMasters: {
+    Bouncemasters: {
         appToken: 'bc72d3b9-8e91-4884-9c33-f72482f0db37',
         promoId: 'bc72d3b9-8e91-4884-9c33-f72482f0db37',
         eventsDelay: 20000,
         attemptsNumber: 30
+    },
+    HideBall: {
+        appToken: "4bf4966c-4d22-439b-8ff2-dc5ebca1a600",
+        promoId: "4bf4966c-4d22-439b-8ff2-dc5ebca1a600",
+        eventsDelay: 30000,
+        attemptsNumber: 20
     }
 };
 
-
-let currentAppConfig = gamePromoConfigs.MyCloneArmy;
+let currentAppConfig = Object.values(gamePromoConfigs)[0];
 var currentLanguage;
 var keygenActive = false;
 
@@ -98,7 +103,7 @@ async function loadTranslations(language) {
         return await response.json();
     } catch (error) {
         console.error('Error loading translations:', error);
-        console.log('Failed to load translations. Check the console for details.');
+        alert('Failed to load translations. Check the console for details.');
         throw error;
     }
 }
@@ -195,7 +200,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
         try {
             clientToken = await login(clientId);
         } catch (error) {
-            console.log(`Failed to log in: ${error.message}`);
+            alert(`Failed to log in: ${error.message}`);
             startBtn.disabled = false;
             return null;
         }
@@ -213,7 +218,7 @@ document.getElementById('startBtn').addEventListener('click', async () => {
             const key = await generateKey(clientToken);
             return key;
         } catch (error) {
-            console.log(`Failed to generate key: ${error.message}`);
+            alert(`Failed to generate key: ${error.message}`);
             return null;
         }
     };
