@@ -71,7 +71,13 @@ const gamePromoConfigs = {
         promoId: "4bf4966c-4d22-439b-8ff2-dc5ebca1a600",
         eventsDelay: 30000,
         attemptsNumber: 20
-    }
+    },
+     CountMasters: {
+       appToken: "4bdc17da-2601-449b-948e-f8c7bd376553",
+       promoId: "4bdc17da-2601-449b-948e-f8c7bd376553",
+       eventsDelay: 30000,
+       attemptsNumber: 20
+     }
 };
 
 let currentAppConfig = Object.values(gamePromoConfigs)[0];
